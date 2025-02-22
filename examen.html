@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Web I PRIM25</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        header {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        h1 {
+            color: red;
+        }
+        h2 {
+            color: black;
+        }
+        table {
+            width: 100%;
+            text-align: center;
+        }
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        .button-container {
+            text-align: center;
+            width: 33%;
+        }
+        .button-container button {
+            background-color: #0073aa;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .logo-container {
+            text-align: center;
+            width: 33%;
+        }
+        .logo-container img {
+            width: 200px;
+            cursor: pointer;
+        }
+        .iframe-container {
+            text-align: right;
+            width: 33%;
+        }
+        iframe {
+            width: 400px;
+            height: 250px;
+            border: 1px solid #ccc;
+        }
+        .images-table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .images-table td {
+            text-align: center;
+            padding: 20px; /* Mayor separación entre imágenes */
+        }
+        .images-table img {
+            width: 300px;
+            height: auto;
+        }
+        footer {
+            background-color: #0073aa;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        address {
+            font-style: italic;
+            color: black;
+            text-align: left;
+            margin-left: 20px;
+        }
+    </style>
+    <script>
+        function mostrarPagina() {
+            document.getElementById("iframeVW").src = "https://es.wikipedia.org/wiki/Tesla,_Inc."; 
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Programación Web I PRIM25</h1>
+        <h2>Evaluación práctica Parcial 1</h2>
+        <h3 style="color: red;">Profesora: M.C. Imelda Deyanira Hernández Martínez</h3>
+        <h6>Alumno(a): Eduardo Tonatiu Cruz Partida</h6>
+    </header>
+
+    <!-- Tabla principal -->
+    <table>
+        <tr>
+            <td class="button-container">
+                <button onclick="mostrarPagina()">Conoce Tesla</button>
+            </td>
+            <td class="logo-container">
+                <img src="logot.jpg" alt="Tesla Logo" onclick="mostrarPagina()">
+            </td>
+            <td class="iframe-container">
+                <iframe id="iframeVW"></iframe>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Tabla de imágenes separadas -->
+    <table class="images-table">
+        <tr>
+            <td><img src="tesla.jpg" alt="Tesla Model S"></td>
+            <td><img src="cyber.jpg" alt="Tesla Cybertruck"></td>
+            <td><img src="musk.jpg" alt="Elon Musk con Tesla"></td>
+        </tr>
+    </table>
+
+    <footer>
+        <p>Universidad Politécnica de San Luis Potosí</p>
+    </footer>
+    <address>Urbano Villalón 500, Col. la Ladrillera</address>
+</body>
+</html>
