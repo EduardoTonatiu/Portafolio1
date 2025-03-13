@@ -1,0 +1,49 @@
+.capa1{
+	margin-left: 25% ;
+	padding: 12px;
+}
+
+ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	width: 20%;
+	height: 100%;
+	background-color:lightpink ;
+	position: fixed;	
+}
+
+li a{
+	background-color: lightpink;
+	color: black;
+	display: block;
+	padding: 16px;
+	text-decoration: none;	
+}
+li a:hover{
+	background-color: violet;
+}
+li .activo{
+	background-color: #9d2ff3;
+	color: white;
+
+
+}
+h1{
+	font-family: "Fredericka the Great", serif;
+}
+H2{
+	font-family: "Lobster", sans-serif;
+
+}
+@font-face{
+	font-family:"fuente1";
+	src:url("Big_Shoulders/BigShoulders-VariableFont_opsz,wght.ttf")
+	format("truetype");
+}
+p{
+	font-family: "fuente1";
+	font-size: 12px ;
+	text-align: justify;
+	
+}
