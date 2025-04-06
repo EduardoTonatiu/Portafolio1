@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #ccc;
+    text-align: center;
+}
+
+.px-box {
+    width: 200px; /* px - Píxeles */
+    height: 100px;
+    background-color: #ffcc00;
+}
+
+.em-box {
+    width: 10em; /* em - Relativo a la fuente */
+    height: 5em;
+    background-color: #66cc66;
+}
+
+.rem-box {
+    width: 15rem; /* rem - Relativo al tamaño raíz */
+    height: 7rem;
+    background-color: #3399ff;
+}
+
+.vw-box {
+    width: 50vw; /* vw - Relativo al ancho de la ventana */
+    height: 10vh; /* vh - Relativo a la altura de la ventana */
+    background-color: #ff6666;
+}
+
+.percentage-box {
+    width: 50%; /* % - Relativo al contenedor */
+    height: 150px;
+    background-color: #ffcc99;
+}
