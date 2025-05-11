@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de Programación Web</title>
+    <link rel="stylesheet" href="encuesta.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Diagnóstico de Conocimientos de Programación Web</h1>
+        <p>Evalúa tus conocimientos en HTML, CSS y JavaScript (10 preguntas)</p>
+        
+        <form id="diagnosticForm">
+            <!-- Preguntas  -->
+            <div class="question">
+                <h3>1. ¿Qué etiqueta HTML se usa para crear un enlace?</h3>
+                <label><input type="radio" name="q1" value="0"> &lt;link&gt;</label>
+                <label><input type="radio" name="q1" value="3"> &lt;a&gt;</label>
+                <label><input type="radio" name="q1" value="0"> &lt;href&gt;</label>
+                <label><input type="radio" name="q1" value="0"> &lt;url&gt;</label>
+            </div>
+            
+            <div class="question">
+                <h3>2. ¿Qué propiedad CSS cambia el color del texto?</h3>
+                <label><input type="radio" name="q2" value="0"> text-color</label>
+                <label><input type="radio" name="q2" value="3"> color</label>
+                <label><input type="radio" name="q2" value="0"> font-color</label>
+                <label><input type="radio" name="q2" value="0"> text-style</label>
+            </div>
+            
+            <div class="question">
+                <h3>3. ¿Cómo se declara una función en JavaScript?</h3>
+                <label><input type="radio" name="q3" value="3"> function myFunction() {}</label>
+                <label><input type="radio" name="q3" value="0"> def myFunction() {}</label>
+                <label><input type="radio" name="q3" value="0"> func myFunction() {}</label>
+                <label><input type="radio" name="q3" value="0"> method myFunction() {}</label>
+            </div>
+            
+            <div class="question">
+                <h3>4. ¿Qué atributo HTML es obligatorio en imágenes?</h3>
+                <label><input type="radio" name="q4" value="0"> href</label>
+                <label><input type="radio" name="q4" value="3"> alt</label>
+                <label><input type="radio" name="q4" value="0"> title</label>
+                <label><input type="radio" name="q4" value="0"> src</label>
+            </div>
+            
+            <div class="question">
+                <h3>5. ¿Qué método JavaScript muestra un cuadro de alerta?</h3>
+                <label><input type="radio" name="q5" value="0"> console.log()</label>
+                <label><input type="radio" name="q5" value="3"> alert()</label>
+                <label><input type="radio" name="q5" value="0"> prompt()</label>
+                <label><input type="radio" name="q5" value="0"> confirm()</label>
+            </div>
+            
+          
+            <div class="question">
+                <h3>6. ¿Qué selector CSS selecciona todos los elementos &lt;p&gt;?</h3>
+                <label><input type="radio" name="q6" value="0"> #p</label>
+                <label><input type="radio" name="q6" value="3"> p</label>
+                <label><input type="radio" name="q6" value="0"> .p</label>
+                <label><input type="radio" name="q6" value="0"> paragraph</label>
+            </div>
+            
+            <div class="question">
+                <h3>7. ¿Qué etiqueta HTML contiene el código JavaScript?</h3>
+                <label><input type="radio" name="q7" value="0"> &lt;css&gt;</label>
+                <label><input type="radio" name="q7" value="0"> &lt;js&gt;</label>
+                <label><input type="radio" name="q7" value="3"> &lt;script&gt;</label>
+                <label><input type="radio" name="q7" value="0"> &lt;code&gt;</label>
+            </div>
+            
+            <div class="question">
+                <h3>8. ¿Qué propiedad CSS se usa para cambiar el tipo de letra?</h3>
+                <label><input type="radio" name="q8" value="0"> text-style</label>
+                <label><input type="radio" name="q8" value="3"> font-family</label>
+                <label><input type="radio" name="q8" value="0"> font-type</label>
+                <label><input type="radio" name="q8" value="0"> text-font</label>
+            </div>
+            
+            <div class="question">
+                <h3>9. ¿Qué método JavaScript convierte un string a número?</h3>
+                <label><input type="radio" name="q9" value="0"> String()</label>
+                <label><input type="radio" name="q9" value="0"> toString()</label>
+                <label><input type="radio" name="q9" value="3"> Number()</label>
+                <label><input type="radio" name="q9" value="0"> Parse()</label>
+            </div>
+            
+            <div class="question">
+                <h3>10. ¿Qué etiqueta HTML define la estructura principal del documento?</h3>
+                <label><input type="radio" name="q10" value="0"> &lt;head&gt;</label>
+                <label><input type="radio" name="q10" value="0"> &lt;body&gt;</label>
+                <label><input type="radio" name="q10" value="0"> &lt;main&gt;</label>
+                <label><input type="radio" name="q10" value="3"> &lt;html&gt;</label>
+            </div>
+            
+            <button type="button" id="evaluateBtn">Evaluar Respuestas</button>
+        </form>
+        
+        <div id="results" class="hidden">
+            <h2>Resultados del Diagnóstico</h2>
+            <p>Tu puntuación: <span id="score">0</span>/30</p>
+            <p id="feedback"></p>
+            
+            <div class="chart-container">
+                <canvas id="resultsChart"></canvas>
+            </div>
+            
+            <button type="button" id="generatePdfBtn">Generar PDF</button>
+        </div>
+    </div>
+
+    <script src="encuesta.js"></script>
+</body>
+</html>
