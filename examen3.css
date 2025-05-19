@@ -1,0 +1,44 @@
+body {
+    font-family: ;
+ background-color: pink;
+}
+
+
+input {
+    padding: 8px 400px;
+    font-size: 16px;
+      background: white;
+}
+
+h1{
+    text-align: center;
+
+}
+
+
+button {
+    padding: 8px 12px;
+    font-size: 16px;
+    text-align: left;
+    background-color: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #c68cf4;
+    margin: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
